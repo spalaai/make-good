@@ -1,0 +1,302 @@
+{
+  "path": "dispute",
+  "ranAt": "2026-10-19T01:07:06.936Z",
+  "note": "PayPal sandbox, play money. Records are synthetic text written for the demo. Emails are masked.",
+  "ai": {
+    "mode": "AI: live (gemini, gemini-3.8-flash)",
+    "source": {
+      "kind": "live",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash"
+    }
+  },
+  "proposal": {
+    "fault": "merchant",
+    "confidence": 1,
+    "summary": "The merchant promised that the download link would be emailed within 1 hour of payment, but after 72 hours no link was issued and delivery status is not delivered.",
+    "citations": [
+      {
+        "recordId": "r3",
+        "quote": "Download link emailed within 1 hour of payment."
+      },
+      {
+        "recordId": "r5",
+        "quote": "Fulfilment log: order received, payment captured, no download link issued after 72 hours."
+      },
+      {
+        "recordId": "r6",
+        "quote": "Delivery status: not delivered."
+      }
+    ]
+  },
+  "decision": {
+    "remedy": "merchant_refund",
+    "amountCents": 2000,
+    "capped": false,
+    "checks": [
+      {
+        "id": "fault_decided",
+        "passed": true
+      },
+      {
+        "id": "confidence",
+        "passed": true
+      },
+      {
+        "id": "has_citations",
+        "passed": true
+      },
+      {
+        "id": "quotes_verbatim",
+        "passed": true
+      },
+      {
+        "id": "right_evidence",
+        "passed": true
+      },
+      {
+        "id": "no_double_pay",
+        "passed": true
+      },
+      {
+        "id": "complaint_text",
+        "passed": true
+      },
+      {
+        "id": "amount_from_policy",
+        "passed": true
+      }
+    ]
+  },
+  "evidence": {
+    "finalStatus": "done",
+    "refundId": null,
+    "disputeId": "PP-R-ABQ-10193441",
+    "payout": null,
+    "paypalSays": {
+      "disputeStatus": "RESOLVED",
+      "outcome": "RESOLVED_BUYER_FAVOUR",
+      "refundedCents": 2000
+    }
+  },
+  "ledger": [
+    {
+      "account": "buyer",
+      "amountCents": 2000,
+      "kind": "merchant_refund",
+      "ref": "PP-R-ABQ-10193441",
+      "label": "Buyer received the refund."
+    },
+    {
+      "account": "merchant",
+      "amountCents": -2000,
+      "kind": "merchant_refund",
+      "ref": "PP-R-ABQ-10193441",
+      "label": "Shop refunded the buyer through PayPal."
+    }
+  ],
+  "audit": [
+    {
+      "at": "2026-10-19T01:05:09.928Z",
+      "actor": "agent",
+      "event": "purchase_recorded"
+    },
+    {
+      "at": "2026-10-19T01:05:09.929Z",
+      "actor": "agent",
+      "event": "incident_opened"
+    },
+    {
+      "at": "2026-10-19T01:05:09.930Z",
+      "actor": "make-good",
+      "event": "agent_picked_up"
+    },
+    {
+      "at": "2026-10-19T01:05:10.857Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:05:17.168Z",
+      "actor": "ai",
+      "event": "proposal_built"
+    },
+    {
+      "at": "2026-10-19T01:05:17.170Z",
+      "actor": "rule",
+      "event": "decision_made"
+    },
+    {
+      "at": "2026-10-19T01:05:17.172Z",
+      "actor": "owner",
+      "event": "approved"
+    },
+    {
+      "at": "2026-10-19T01:05:18.335Z",
+      "actor": "make-good",
+      "event": "offer_requested"
+    },
+    {
+      "at": "2026-10-19T01:05:20.625Z",
+      "actor": "make-good",
+      "event": "offer_made"
+    },
+    {
+      "at": "2026-10-19T01:05:21.678Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:05:22.624Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:05:38.734Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:05:39.682Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:05:56.375Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:05:57.876Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:06:13.870Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:06:14.801Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:06:31.360Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:06:32.343Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:06:48.942Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:06:49.956Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:07:05.997Z",
+      "actor": "make-good",
+      "event": "dispute_synced"
+    },
+    {
+      "at": "2026-10-19T01:07:05.998Z",
+      "actor": "make-good",
+      "event": "ledger_written"
+    },
+    {
+      "at": "2026-10-19T01:07:05.999Z",
+      "actor": "make-good",
+      "event": "dispute_resolved"
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-19T01:05:08.636Z",
+      "step": "start",
+      "detail": {
+        "path": "dispute",
+        "payments": "PayPal sandbox (play money)",
+        "ai": "AI: live (gemini, gemini-3.8-flash)",
+        "db": "data/live-dispute-2026-10-19T01-05-08-628Z.db"
+      }
+    },
+    {
+      "at": "2026-10-19T01:05:09.925Z",
+      "step": "dispute_found",
+      "detail": {
+        "disputeId": "PP-R-ABQ-10193441",
+        "status": "WAITING_FOR_SELLER_RESPONSE",
+        "amountCents": 2000,
+        "allowed": [
+          "send_message",
+          "make_offer",
+          "escalate",
+          "accept_claim",
+          "provide_evidence"
+        ]
+      }
+    },
+    {
+      "at": "2026-10-19T01:05:09.929Z",
+      "step": "incident_opened",
+      "detail": {
+        "incidentId": "inc_81b2aa353acb"
+      }
+    },
+    {
+      "at": "2026-10-19T01:05:17.171Z",
+      "step": "proposed",
+      "detail": {
+        "status": "needs_owner",
+        "fault": "merchant",
+        "confidence": 1,
+        "remedy": "merchant_refund",
+        "amountCents": 2000,
+        "aiSource": {
+          "kind": "live",
+          "provider": "gemini",
+          "model": "gemini-3.8-flash"
+        },
+        "citationsOk": true
+      }
+    },
+    {
+      "at": "2026-10-19T01:05:20.630Z",
+      "step": "approved",
+      "detail": {
+        "status": "offer_made"
+      }
+    },
+    {
+      "at": "2026-10-19T01:05:22.626Z",
+      "step": "status",
+      "detail": {
+        "status": "offer_made",
+        "dispute": "UNDER_REVIEW"
+      }
+    },
+    {
+      "at": "2026-10-19T01:05:22.626Z",
+      "step": "waiting_for_buyer",
+      "detail": {
+        "note": "The buyer must accept the offer on PayPal's page. Run scripts/sandbox/g1-accept.mjs with the dispute id."
+      }
+    },
+    {
+      "at": "2026-10-19T01:07:06.000Z",
+      "step": "status",
+      "detail": {
+        "status": "done",
+        "dispute": "RESOLVED"
+      }
+    }
+  ]
+}

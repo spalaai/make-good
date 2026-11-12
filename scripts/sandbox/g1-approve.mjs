@@ -1,0 +1,15 @@
+import { launch, login, shot, blocked } from "./buyer-lib.mjs";
+const order = process.argv[2];
+const { b, p } = await launch();
+await p.goto(`https://www.sandbox.paypal.com/checkoutnow?token=${order}&locale.x=en_US`, { waitUntil: "domcontentloaded", timeout: 60000 });
+await login(p);
+console.log("after login url:", p.url().split("?")[0], "| blocked:", await blocked(p));
+await shot(p, "approve-1-after-login");
+const btn = p.getByRole('button', { name: /Selesaikan|Complete Purchase|Pay Now|Bayar Sekarang|Continue|Lanjut/i }).first();
+await btn.waitFor({ timeout: 30000 });
+console.log("button text:", (await btn.innerText()).trim());
+await shot(p, "approve-2-review");
+await Promise.all([p.waitForURL(/example\.com/, { timeout: 60000 }).catch(() => {}), btn.click()]);
+await p.waitForTimeout(4000);
+console.log("final url:", p.url().split("?")[0]);
+await b.close();

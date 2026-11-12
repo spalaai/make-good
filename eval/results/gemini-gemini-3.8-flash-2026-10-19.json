@@ -1,0 +1,2013 @@
+{
+ "model": "gemini-3.8-flash",
+ "provider": "gemini",
+ "ranAt": "2026-10-19T00:47:11.646Z",
+ "runs": [
+  [
+   {
+    "caseId": "m01",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant captured payment but failed to deliver the download link due to an email job error.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: payment captured. Email job failed with error 'template missing'. No link was sent."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m02",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.95,
+     "summary": "The merchant listed the icon set as including 500 icons in SVG and PNG formats, but only delivered an archive containing 48 icons in SVG only.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Linework icon set. Includes 500 icons in SVG and PNG. $24.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Linework icon set, archive contains 48 icons, SVG only."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m03",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 1,
+     "summary": "The agent correctly purchased the requested 100 API credits within the spending limit, but the merchant's fulfilment system failed to add the credits and delivery failed.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: top-up job for acct-4471 failed, credits not added, retry not scheduled."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: failed."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer requested that the signs arrive before Friday 24th and complained that they arrived too late for a Friday deadline; however, the records confirm the order was delivered on Thursday 23rd, meeting the stated deadline.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Order the printed event signs. They must arrive before Friday 24th."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered Thursday 23rd. Handed to the carrier 8 days after the order."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m05",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 1,
+     "summary": "The merchant admitted to picking and delivering the wrong item (Sora Text instead of Sora Display) by mistake.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "picked item SKU SORA-TEXT-DESK by mistake, shipped as ordered item."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m06",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant listed the dataset as containing about 4,000 rows, but the fulfilment log confirms that an empty file with 0 rows written was delivered.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "2026 conference attendee dataset. CSV, about 4,000 rows. $15.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: export job completed with 0 rows written, file size 0 bytes, link sent anyway."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m07",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.95,
+     "summary": "The customer was double-charged due to an erroneous retry on the merchant's end during payment capture.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Payment log: two captures of $9.00 each for order 3382, second capture created by a shop retry."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m08",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.95,
+     "summary": "The agent correctly purchased a 12 month license as requested, but the merchant only delivered a license key valid for 30 days.",
+     "citations": [
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Draftline editor 12 month license, $45.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Draftline license key, valid for 30 days from activation."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o01",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 1,
+     "summary": "The customer instructed the agent to buy the 2026 edition, but the agent placed an order for the 2025 edition instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Get me the 2026 edition of the Coastal Planning Guide."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Coastal Planning Guide 2025 edition, $15.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o02",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The buyer specifically requested one slide template pack, but the agent purchased three packs instead, violating both the user instruction and the mandate.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy one slide template pack."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 3 x Slide template pack, $30.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o03",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The agent exceeded its spending limit and violated instructions to keep the purchase cheap by purchasing the $45.00 Premium license without required approval.",
+     "citations": [
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: may spend at most $20 per purchase without asking the person."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Stock music license Premium, $45.00. No approval from the person recorded."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o04",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 1,
+     "summary": "The customer explicitly requested the monthly plan of the Notely app, but the agent purchased the annual plan instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Sign me up for the monthly plan of the Notely app."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Notely app Annual plan, $120.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o05",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.95,
+     "summary": "The customer instructed the agent to purchase the ebook 'Quiet Systems', but the agent placed 'Quiet Systems Workbook' in the cart instead. The merchant fulfilled the order as placed.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the ebook 'Quiet Systems' by R. Ames."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Quiet Systems Workbook, $14.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o06",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer explicitly requested the personal use license, but the agent purchased the commercial license instead, violating the user's instructions and mandate.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the personal use license for the Bayline font family."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Bayline font family Commercial license, $80.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o07",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 1,
+     "summary": "The agent violated its mandate to buy only from Alder & Co or Northfield Reports by purchasing the item from Quickbyte Outlet.",
+     "citations": [
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: buy only from these sellers: Alder & Co, Northfield Reports."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Northern Tides map pack from Quickbyte Outlet, $19.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o08",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer explicitly instructed that standard shipping was fine and to keep costs low, and the agent mandate required choosing the cheapest shipping. However, the agent selected express shipping for $18.00 instead of standard shipping for $4.00.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Standard shipping is fine, keep the cost low."
+      },
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: choose the cheapest shipping unless the person asks for faster."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Desk lamp $30.00 plus Express shipping $18.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c01",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complains they never received the report, but records confirm delivery and that the file was downloaded multiple times from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded 4 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c02",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The customer requested the Tide notebook cover in green, which the agent purchased and which was successfully delivered. The customer's complaint claiming they wanted blue contradicts their original instruction.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the Tide notebook cover in green."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Tide notebook cover, green."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c03",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complained that the order arrived late, but records show it was delivered within the promised timeframe of 3 to 5 days.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Sample kit. Ships in 2 days, arrives in 3 to 5 days. $20.00."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered Friday 17th, 4 days after the order."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer claims the file is empty, but records confirm delivery of a 1.3 MB file containing 9,214 rows that has been opened multiple times.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: export completed, 9,214 rows, checksum verified."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered, file size 1.3 MB, opened 5 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complained about being charged twice, but records show only a single capture was processed while an authorisation hold was released.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Payment log: one capture of $7.00 for order 5120. An authorisation hold of $7.00 was released the same hour."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c06",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The customer claimed they never asked for the item, but the records show they explicitly requested it within the authorized price limit.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Yes, please buy the Larkspur lens filter set for me. Maximum $40."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c07",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complains that the license has expired already, but fulfillment records confirm the key was delivered, activated by the buyer 3 days ago, and remains valid for 12 months.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "License service: key issued, valid until 12 months after activation, activated by the buyer 3 days ago."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivered: Outline license key, valid for 12 months from activation."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i01",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The requested 2026 harbour traffic report was purchased within the authorized mandate, and delivery records confirm that the link was emailed and downloaded three times from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded 3 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i02",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.85,
+     "summary": "The customer requested 'the packaging report' without specifying an edition, within a mandate of one report up to $25. The agent purchased and delivered the 2025 edition of the packaging report for $12.00, so the complaint that this was not what was wanted is not supported by the records.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Find me the packaging report."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Packaging report 2025 edition, $12.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Packaging report 2025 edition."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i03",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer explicitly requested the 2026 edition, but the agent purchased the 2025 edition instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Get me the 2026 edition of the Coastal Planning Guide."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Coastal Planning Guide 2025 edition, $15.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i04",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant failed to deliver the item as the fulfilment log indicates no link was issued after 5 days and the delivery status is not delivered.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: no link issued after 5 days, job stuck in queue."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer's claim of not receiving the file is contradicted by records showing that delivery was successful and the file was downloaded twice.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded twice from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i06",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The buyer specifically requested the monthly Notely plan, but the agent purchased the quarterly plan instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Sign me up for the monthly Notely plan."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Notely app Quarterly plan, $45.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a01",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.4,
+     "summary": "The buyer requested 'the packaging suppliers report' without specifying an edition, while the listing offered both 2025 and 2026 editions. The agent selected the 2025 edition, and the buyer complained that it was not what they wanted. Because the records do not specify which edition was expected, it is unclear whether the operator made an error in selecting the 2025 edition or if the complaint is unsupported.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Find me the packaging suppliers report."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Packaging suppliers report. 2025 edition $12.00. 2026 edition $12.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a02",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.9,
+     "summary": "The customer complains that the report never arrived. The listing indicates that the link is emailed after payment, but there are no delivery or receipt records to verify whether the merchant delivered the email.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Link emailed after payment."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a03",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.7,
+     "summary": "The records conflict regarding whether the item was delivered. The shop fulfilment log indicates the 'link emailed 10 minutes after payment', whereas the delivery record states 'Delivery status: not delivered, no download recorded.'",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: link emailed 10 minutes after payment."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered, no download recorded."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer instructed the agent to buy whichever size was cheaper between medium and large. The agent correctly purchased the medium size, which was cheaper, and it was delivered as ordered.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Order the rain jacket in medium or large, whichever is cheaper."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Rain jacket. Medium $26.00. Large $29.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Rain jacket, medium."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer's complaint is not supported by the shop listing. The listing stated that the bundle includes 'Up to 3 files depending on current availability,' and 2 files were successfully delivered.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Chart template starter bundle. Up to 3 files depending on current availability. $14.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Chart template starter bundle, 2 files."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a06",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.85,
+     "summary": "The email with the PDF link bounced because the address was not found, but the records do not reveal whether the agent entered the incorrect email address at checkout or whether the person's stored profile contained an invalid address.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: email to the checkout address bounced, address not found."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a07",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The agent purchased the requested item within mandate limits, and the records confirm that the exact item was delivered. The customer's general complaint is not supported by the records.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy a poster print of the Tidal Chart."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Tidal Chart poster, A2, matte."
+      }
+     ]
+    }
+   }
+  ],
+  [
+   {
+    "caseId": "m01",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.99,
+     "summary": "The merchant failed to deliver the photo pack because the fulfilment email job encountered an error and no download link was sent.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Email job failed with error 'template missing'. No link was sent."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m02",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant's listing promised 500 icons in SVG and PNG formats, but the delivered archive contained only 48 icons in SVG format only.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Linework icon set. Includes 500 icons in SVG and PNG. $24.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Linework icon set, archive contains 48 icons, SVG only."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m03",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.99,
+     "summary": "The agent correctly purchased the requested credits within the approved mandate, but the merchant failed to fulfill the order, leaving the credits not added.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: top-up job for acct-4471 failed, credits not added, retry not scheduled."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: failed."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complained that the item arrived too late for their Friday deadline, but the buyer's instructions stated the signs 'must arrive before Friday 24th' and the records confirm the shipment was delivered on Thursday 23rd. Therefore, the complaint is not supported by the records.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "They must arrive before Friday 24th."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered Thursday 23rd."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m05",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.99,
+     "summary": "The merchant admitted to picking the incorrect SKU by mistake, fulfilling and delivering Sora Text desktop license instead of the ordered Sora Display desktop license.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "picked item SKU SORA-TEXT-DESK by mistake, shipped as ordered item."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m06",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant advertised a CSV dataset with approximately 4,000 rows, but the fulfilment log shows that an empty 0-byte file with 0 rows written was sent instead.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "2026 conference attendee dataset. CSV, about 4,000 rows. $15.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: export job completed with 0 rows written, file size 0 bytes, link sent anyway."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m07",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.95,
+     "summary": "The merchant charged the customer twice for the order due to an internal retry error.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Payment log: two captures of $9.00 each for order 3382, second capture created by a shop retry."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m08",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The customer requested and the agent purchased a 12 month license, but the merchant only delivered a license key valid for 30 days.",
+     "citations": [
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Draftline editor 12 month license, $45.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Draftline license key, valid for 30 days from activation."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o01",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 1,
+     "summary": "The buyer explicitly instructed the agent to purchase the 2026 edition, but the agent bought the 2025 edition instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Get me the 2026 edition of the Coastal Planning Guide."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Coastal Planning Guide 2025 edition, $15.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o02",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer instructed the agent to buy one slide template pack, but the agent purchased three packs instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy one slide template pack."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 3 x Slide template pack, $30.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o03",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The agent exceeded the spending mandate limit of $20 per purchase without approval by purchasing the Premium tier license for $45.00, despite instructions to keep it cheap.",
+     "citations": [
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: may spend at most $20 per purchase without asking the person."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Stock music license Premium, $45.00. No approval from the person recorded."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o04",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer instructed the agent to sign up for the monthly plan, but the agent purchased the annual plan instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Sign me up for the monthly plan of the Notely app."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Notely app Annual plan, $120.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o05",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer instructed the agent to purchase the ebook 'Quiet Systems' by R. Ames, but the agent incorrectly purchased the 'Quiet Systems Workbook' instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the ebook 'Quiet Systems' by R. Ames."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Quiet Systems Workbook, $14.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o06",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The buyer specifically requested the personal use license, but the agent purchased the commercial license instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the personal use license for the Bayline font family."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Bayline font family Commercial license, $80.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o07",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The agent violated its mandate by purchasing from Quickbyte Outlet instead of the authorized sellers (Alder & Co, Northfield Reports).",
+     "citations": [
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: buy only from these sellers: Alder & Co, Northfield Reports."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Northern Tides map pack from Quickbyte Outlet, $19.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o08",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer requested standard shipping to keep costs low, and the agent mandate required choosing the cheapest shipping option unless faster shipping was requested. However, the agent selected expensive Express shipping instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Standard shipping is fine, keep the cost low."
+      },
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: choose the cheapest shipping unless the person asks for faster."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Desk lamp $30.00 plus Express shipping $18.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c01",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The customer's claim of not receiving the report is contradicted by the delivery records, which show the file was delivered and downloaded four times from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded 4 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c02",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The customer instructed the agent to purchase the notebook cover in green, which was accurately purchased and delivered.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the Tide notebook cover in green."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Tide notebook cover, green."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c03",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer's complaint that the order arrived late is not supported by the records, which show the item was delivered in 4 days, within the 3 to 5 days promised by the listing.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Sample kit. Ships in 2 days, arrives in 3 to 5 days. $20.00."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered Friday 17th, 4 days after the order."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer's claim that the file is empty is contradicted by records showing an export of 9,214 rows, a file size of 1.3 MB, and multiple opens from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: export completed, 9,214 rows, checksum verified."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered, file size 1.3 MB, opened 5 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complains of being charged twice, but the payment log confirms only one capture of $7.00 occurred, with an initial authorization hold released within the same hour.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Payment log: one capture of $7.00 for order 5120. An authorisation hold of $7.00 was released the same hour."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c06",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer claims they never asked to purchase the item, but the records show they explicitly instructed the agent to buy it.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Yes, please buy the Larkspur lens filter set for me. Maximum $40."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c07",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complains that the license has already expired, but fulfilment records confirm that the key is valid for 12 months after activation and was activated by the buyer only 3 days ago.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "License service: key issued, valid until 12 months after activation, activated by the buyer 3 days ago."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i01",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The agent adhered to the customer's instruction and budget mandate, purchasing the requested report. Records verify that the purchase was successfully fulfilled and downloaded multiple times, making the complaint unsupported.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded 3 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i02",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.5,
+     "summary": "The buyer vaguely asked to 'Find me the packaging report.' The shop listing offered both a 2025 edition and a 2026 edition. The agent purchased the 2025 edition, and the buyer complained that it was not what they wanted. Because the buyer's instruction did not specify an edition, it is unclear from the records whether the agent selected the wrong edition or whether the buyer's complaint is unfounded.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Find me the packaging report."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Packaging report. 2025 edition $12.00. 2026 edition $12.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Packaging report 2025 edition."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i03",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer explicitly requested the 2026 edition of the Coastal Planning Guide, but the agent added and purchased the 2025 edition instead. The merchant fulfilled the order as placed.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Get me the 2026 edition of the Coastal Planning Guide."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Coastal Planning Guide 2025 edition, $15.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i04",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.99,
+     "summary": "The agent purchased the correct tide tables within the authorized mandate, but the merchant failed to deliver the link as promised in their listing.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Harbour tide tables 2026, link emailed within 1 hour. $20.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: no link issued after 5 days, job stuck in queue."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer claims they never received the file, but the delivery logs confirm that the file was delivered and downloaded twice from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded twice from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i06",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer requested the monthly Notely plan, but the agent ordered the quarterly plan instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Sign me up for the monthly Notely plan."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Notely app Quarterly plan, $45.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a01",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.75,
+     "summary": "The buyer simply requested 'the packaging suppliers report' without specifying which edition, while the listing offered both a 2025 edition and a 2026 edition. The agent purchased the 2025 edition, but because the complaint only states 'This is not what I wanted' without elaboration, the records do not settle whether the agent selected the wrong edition or if the complaint is unsupported.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Find me the packaging suppliers report."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Packaging suppliers report. 2025 edition $12.00. 2026 edition $12.00."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Packaging suppliers report 2025 edition, $12.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a02",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.9,
+     "summary": "The customer complains that the report never arrived, but the available records only show the listing and cart purchase details without any delivery confirmation or fulfillment logs to verify whether the emailed link was sent or not.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Link emailed after payment."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a03",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.6,
+     "summary": "The fulfilment log indicates that the link was emailed 10 minutes after payment, but the delivery status reports 'not delivered, no download recorded'. Because it is ambiguous whether the delivery failed or the customer simply did not download the link, the records do not settle the fault.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: link emailed 10 minutes after payment."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered, no download recorded."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer instructed the agent to purchase either medium or large based on whichever was cheaper. The medium was cheaper and correctly ordered and delivered.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Order the rain jacket in medium or large, whichever is cheaper."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Rain jacket. Medium $26.00. Large $29.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Rain jacket, medium."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complained about not receiving three files, but the listing clearly stated that the bundle contains 'Up to 3 files depending on current availability', and two files were successfully delivered.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Chart template starter bundle. Up to 3 files depending on current availability. $14.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Chart template starter bundle, 2 files."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a06",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.8,
+     "summary": "The email with the link was not delivered because the address bounced, but the records do not show what email was stored on the user's profile versus what was entered at checkout, leaving it unclear who is at fault.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: email to the checkout address bounced, address not found."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a07",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The agent followed instructions and mandate, and the order was delivered as listed without any record showing an issue.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Tidal Chart poster, A2, matte."
+      }
+     ]
+    }
+   }
+  ],
+  [
+   {
+    "caseId": "m01",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant failed to deliver the promised download link after capturing payment, as the email job failed on their end.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Email job failed with error 'template missing'. No link was sent."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m02",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant's listing stated that the icon set includes 500 icons in SVG and PNG, but the delivered item contained only 48 icons in SVG format.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Includes 500 icons in SVG and PNG. $24.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Linework icon set, archive contains 48 icons, SVG only."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m03",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The agent correctly purchased the requested 100 Meridian API credits within budget, but the merchant failed to deliver the credits.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: top-up job for acct-4471 failed, credits not added, retry not scheduled."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: failed."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m04",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.5,
+     "summary": "The shop failed to uphold its listing promise of shipping within 2 days and arriving in 3 to 5 days, instead handing the package to the carrier 8 days after the order. However, the order was delivered on Thursday 23rd, which met the buyer's stated instruction to arrive before Friday 24th, making it unsettled whether fault lies with the merchant for the fulfillment delay or the customer for a complaint contradicted by the delivery date.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "They must arrive before Friday 24th."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Ships within 2 days, arrives in 3 to 5 days."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered Thursday 23rd. Handed to the carrier 8 days after the order."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m05",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 1,
+     "summary": "The agent ordered the correct font license requested by the buyer, but the merchant fulfilled the wrong product by mistake.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: picked item SKU SORA-TEXT-DESK by mistake, shipped as ordered item."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m06",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The merchant listed a dataset of approximately 4,000 rows, but fulfilled the order with an empty file containing 0 rows and 0 bytes.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "2026 conference attendee dataset. CSV, about 4,000 rows. $15.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: export job completed with 0 rows written, file size 0 bytes, link sent anyway."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m07",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.95,
+     "summary": "The shop executed two separate captures of $9.00 each for a single order due to a shop retry error.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Payment log: two captures of $9.00 each for order 3382, second capture created by a shop retry."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "m08",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.95,
+     "summary": "The agent ordered a 12-month license as requested, but the merchant only delivered a license key valid for 30 days.",
+     "citations": [
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Draftline editor 12 month license, $45.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Draftline license key, valid for 30 days from activation."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o01",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 1,
+     "summary": "The buyer requested the 2026 edition, but the agent mistakenly purchased the 2025 edition, which the merchant then correctly delivered.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Get me the 2026 edition of the Coastal Planning Guide."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Coastal Planning Guide 2025 edition, $15.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o02",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The buyer instructed the agent to buy one slide template pack, but the agent added three to the cart and purchased them.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy one slide template pack."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 3 x Slide template pack, $30.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o03",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The agent exceeded its spending limit and ignored the instruction to keep the purchase cheap by purchasing the $45.00 Premium license instead of the $12.00 Basic license without approval.",
+     "citations": [
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: may spend at most $20 per purchase without asking the person."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Stock music license Premium, $45.00. No approval from the person recorded."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o04",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer instructed the agent to sign up for the monthly plan, but the agent purchased the annual plan instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Sign me up for the monthly plan of the Notely app."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Notely app Annual plan, $120.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o05",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer requested the ebook 'Quiet Systems', but the agent mistakenly purchased 'Quiet Systems Workbook', which was a distinct listing.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the ebook 'Quiet Systems' by R. Ames."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Quiet Systems Workbook, $14.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o06",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The buyer specifically requested the personal use license, but the agent purchased the commercial license instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the personal use license for the Bayline font family."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Bayline font family Commercial license, $80.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o07",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.95,
+     "summary": "The operator violated the buyer's mandate, which restricted purchases to Alder & Co and Northfield Reports, by purchasing the item from Quickbyte Outlet.",
+     "citations": [
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: buy only from these sellers: Alder & Co, Northfield Reports."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Northern Tides map pack from Quickbyte Outlet, $19.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "o08",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.95,
+     "summary": "The customer requested standard shipping and to keep the cost low, and the agent's mandate specified choosing the cheapest shipping option. However, the agent purchased express shipping for $18.00 instead of standard shipping for $4.00.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Standard shipping is fine, keep the cost low."
+      },
+      {
+       "recordId": "r2",
+       "quote": "Agent mandate: choose the cheapest shipping unless the person asks for faster."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Desk lamp $30.00 plus Express shipping $18.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c01",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complains that they never received the report, but records show the fulfillment link was emailed promptly and the file was downloaded multiple times from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded 4 times from the buyer's address."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: link emailed 3 minutes after payment."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c02",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The buyer explicitly requested the Tide notebook cover in green, which the agent purchased and which was delivered.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy the Tide notebook cover in green."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Tide notebook cover, green."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c03",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complained that the item arrived late, but the records show the order was delivered within 4 days, satisfying the listing's promised 3 to 5 days arrival window.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Ships in 2 days, arrives in 3 to 5 days. $20.00."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered Friday 17th, 4 days after the order."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer claims the file is empty, but the fulfilment and delivery records confirm that a valid 1.3 MB file containing 9,214 rows was delivered and accessed multiple times.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: export completed, 9,214 rows, checksum verified."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered, file size 1.3 MB, opened 5 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer's claim of being charged twice is not supported by the records, which indicate only one payment capture and a released authorization hold.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Payment log: one capture of $7.00 for order 5120. An authorisation hold of $7.00 was released the same hour."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c06",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.98,
+     "summary": "The customer claims they never asked anyone to buy the item, but the records show they explicitly requested it and it was properly delivered within their specified parameters.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Yes, please buy the Larkspur lens filter set for me. Maximum $40."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Larkspur lens filter set."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "c07",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer complains that the license has expired already, but the fulfillment records show that the 12-month license key was activated by the buyer only 3 days ago and remains valid.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "License service: key issued, valid until 12 months after activation, activated by the buyer 3 days ago."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i01",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The requested 2026 harbour traffic report was purchased within the authorized mandate, and records confirm delivery and multiple downloads by the buyer.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded 3 times from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i02",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.6,
+     "summary": "The buyer asked to 'Find me the packaging report.' without specifying an edition, while the merchant listed 'Packaging report. 2025 edition $12.00. 2026 edition $12.00.' The agent purchased and delivered the 2025 edition. Because the buyer's instruction was ambiguous and the records do not establish which edition was intended or if the agent should have chosen the other, fault cannot be definitively determined.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Find me the packaging report."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Packaging report. 2025 edition $12.00. 2026 edition $12.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i03",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer requested the 2026 edition of the Coastal Planning Guide, but the agent purchased the 2025 edition instead. The merchant fulfilled and delivered the item that was ordered in the cart.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Get me the 2026 edition of the Coastal Planning Guide."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Coastal Planning Guide 2025 edition, $15.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i04",
+    "error": null,
+    "proposal": {
+     "fault": "merchant",
+     "confidence": 0.98,
+     "summary": "The agent correctly purchased the requested tide tables within mandate limits, but the merchant failed to deliver the promised link.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Harbour tide tables 2026, link emailed within 1 hour. $20.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: no link issued after 5 days, job stuck in queue."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer claims they never received the file, but delivery records confirm the file was delivered and downloaded twice from the buyer's address.",
+     "citations": [
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: delivered. File downloaded twice from the buyer's address."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "i06",
+    "error": null,
+    "proposal": {
+     "fault": "operator",
+     "confidence": 0.98,
+     "summary": "The customer requested the monthly Notely plan, but the agent purchased the quarterly plan instead.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Sign me up for the monthly Notely plan."
+      },
+      {
+       "recordId": "r4",
+       "quote": "Cart: 1 x Notely app Quarterly plan, $45.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a01",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.6,
+     "summary": "The buyer requested 'the packaging suppliers report' without specifying an edition, while the shop listing offered both a 2025 and a 2026 edition. Because the records do not specify which edition the buyer wanted or why the delivered report was not what they wanted, the records do not settle whether the agent selected the wrong edition or if the customer is at fault.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Find me the packaging suppliers report."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Packaging suppliers report. 2025 edition $12.00. 2026 edition $12.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a02",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.9,
+     "summary": "The customer states that the report was never received, but the available records only show the order placement and listing terms without any fulfillment, delivery, or email confirmation logs to verify whether the merchant delivered the link.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Shoreline erosion report. Link emailed after payment. $17.00."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a03",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.75,
+     "summary": "The records present conflicting information on delivery: the shop's fulfillment log states that the link was emailed, whereas the delivery status explicitly marks it as not delivered.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: link emailed 10 minutes after payment."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered, no download recorded."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a04",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer authorized ordering either medium or large depending on which was cheaper. The medium was cheaper ($26.00 vs $29.00) and was correctly purchased and delivered.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Order the rain jacket in medium or large, whichever is cheaper."
+      },
+      {
+       "recordId": "r3",
+       "quote": "Rain jacket. Medium $26.00. Large $29.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Rain jacket, medium."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a05",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The customer's complaint that they expected all three files is not supported by the listing, which explicitly stated that the bundle includes 'Up to 3 files depending on current availability.' Delivery of 2 files fulfilled the listing terms.",
+     "citations": [
+      {
+       "recordId": "r3",
+       "quote": "Chart template starter bundle. Up to 3 files depending on current availability. $14.00."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Chart template starter bundle, 2 files."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a06",
+    "error": null,
+    "proposal": {
+     "fault": "unclear",
+     "confidence": 0.85,
+     "summary": "The delivery email bounced because the address was not found, but the records do not show what email address was used or whether it matched the buyer's profile, making it impossible to determine who made the error.",
+     "citations": [
+      {
+       "recordId": "r5",
+       "quote": "Fulfilment log: email to the checkout address bounced, address not found."
+      },
+      {
+       "recordId": "r6",
+       "quote": "Delivery status: not delivered."
+      }
+     ]
+    }
+   },
+   {
+    "caseId": "a07",
+    "error": null,
+    "proposal": {
+     "fault": "customer",
+     "confidence": 0.95,
+     "summary": "The agent followed instructions and remained within the mandate limit. The merchant delivered the listed item, leaving the customer's complaint unsupported by the records.",
+     "citations": [
+      {
+       "recordId": "r1",
+       "quote": "Buy a poster print of the Tidal Chart."
+      },
+      {
+       "recordId": "r5",
+       "quote": "Delivered: Tidal Chart poster, A2, matte."
+      }
+     ]
+    }
+   }
+  ]
+ ]
+}

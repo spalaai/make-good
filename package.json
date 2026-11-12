@@ -1,0 +1,26 @@
+{
+  "name": "make-good",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "seed": "tsx seed/seed.ts",
+    "dev": "tsx watch server/index.ts",
+    "dev:web": "npm run dev --prefix web",
+    "start": "tsx server/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "npm run build --prefix web && tsc -p tsconfig.json --noEmit",
+    "postinstall": "npm install --prefix web"
+  },
+  "dependencies": { "zod": "^3.24.2" },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "playwright": "^1.64.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}

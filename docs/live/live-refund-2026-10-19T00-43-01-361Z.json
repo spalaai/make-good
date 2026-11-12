@@ -1,0 +1,196 @@
+{
+  "path": "refund",
+  "ranAt": "2026-10-19T00:43:09.983Z",
+  "note": "PayPal sandbox, play money. Records are synthetic text written for the demo. Emails are masked.",
+  "ai": {
+    "mode": "AI: live (gemini, gemini-3.8-flash)",
+    "source": {
+      "kind": "live",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash"
+    }
+  },
+  "proposal": {
+    "fault": "merchant",
+    "confidence": 1,
+    "summary": "The merchant failed to deliver the download link as promised in the listing within 1 hour of payment, and records show no download link was issued after 72 hours.",
+    "citations": [
+      {
+        "recordId": "r3",
+        "quote": "Download link emailed within 1 hour of payment."
+      },
+      {
+        "recordId": "r5",
+        "quote": "Fulfilment log: order received, payment captured, no download link issued after 72 hours."
+      },
+      {
+        "recordId": "r6",
+        "quote": "Delivery status: not delivered."
+      }
+    ]
+  },
+  "decision": {
+    "remedy": "merchant_refund",
+    "amountCents": 100,
+    "capped": false,
+    "checks": [
+      {
+        "id": "fault_decided",
+        "passed": true
+      },
+      {
+        "id": "confidence",
+        "passed": true
+      },
+      {
+        "id": "has_citations",
+        "passed": true
+      },
+      {
+        "id": "quotes_verbatim",
+        "passed": true
+      },
+      {
+        "id": "right_evidence",
+        "passed": true
+      },
+      {
+        "id": "no_double_pay",
+        "passed": true
+      },
+      {
+        "id": "complaint_text",
+        "passed": true
+      },
+      {
+        "id": "amount_from_policy",
+        "passed": true
+      }
+    ]
+  },
+  "evidence": {
+    "finalStatus": "done",
+    "refundId": "7RK15023H11110310",
+    "disputeId": null,
+    "payout": null,
+    "paypalSays": {
+      "http": 200,
+      "refundStatus": "COMPLETED",
+      "amount": "1.00"
+    }
+  },
+  "ledger": [
+    {
+      "account": "buyer",
+      "amountCents": 100,
+      "kind": "merchant_refund",
+      "ref": "7RK15023H11110310",
+      "label": "Buyer received the refund."
+    },
+    {
+      "account": "merchant",
+      "amountCents": -100,
+      "kind": "merchant_refund",
+      "ref": "7RK15023H11110310",
+      "label": "Shop refunded the buyer through PayPal."
+    }
+  ],
+  "audit": [
+    {
+      "at": "2026-10-19T00:43:01.376Z",
+      "actor": "agent",
+      "event": "purchase_recorded"
+    },
+    {
+      "at": "2026-10-19T00:43:01.378Z",
+      "actor": "agent",
+      "event": "incident_opened"
+    },
+    {
+      "at": "2026-10-19T00:43:01.380Z",
+      "actor": "make-good",
+      "event": "agent_picked_up"
+    },
+    {
+      "at": "2026-10-19T00:43:06.143Z",
+      "actor": "ai",
+      "event": "proposal_built"
+    },
+    {
+      "at": "2026-10-19T00:43:06.148Z",
+      "actor": "rule",
+      "event": "decision_made"
+    },
+    {
+      "at": "2026-10-19T00:43:06.150Z",
+      "actor": "owner",
+      "event": "approved"
+    },
+    {
+      "at": "2026-10-19T00:43:06.153Z",
+      "actor": "make-good",
+      "event": "refund_requested"
+    },
+    {
+      "at": "2026-10-19T00:43:08.759Z",
+      "actor": "make-good",
+      "event": "refund_confirmed"
+    },
+    {
+      "at": "2026-10-19T00:43:08.761Z",
+      "actor": "make-good",
+      "event": "ledger_written"
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-19T00:43:01.373Z",
+      "step": "start",
+      "detail": {
+        "path": "refund",
+        "payments": "PayPal sandbox (play money)",
+        "ai": "AI: live (gemini, gemini-3.8-flash)",
+        "db": "data/live-refund-2026-10-19T00-43-01-361Z.db"
+      }
+    },
+    {
+      "at": "2026-10-19T00:43:01.379Z",
+      "step": "incident_opened",
+      "detail": {
+        "incidentId": "inc_02fdb12ad63c"
+      }
+    },
+    {
+      "at": "2026-10-19T00:43:06.149Z",
+      "step": "proposed",
+      "detail": {
+        "status": "needs_owner",
+        "fault": "merchant",
+        "confidence": 1,
+        "remedy": "merchant_refund",
+        "amountCents": 100,
+        "aiSource": {
+          "kind": "live",
+          "provider": "gemini",
+          "model": "gemini-3.8-flash"
+        },
+        "citationsOk": true
+      }
+    },
+    {
+      "at": "2026-10-19T00:43:08.762Z",
+      "step": "approved",
+      "detail": {
+        "status": "done"
+      }
+    },
+    {
+      "at": "2026-10-19T00:43:08.763Z",
+      "step": "status",
+      "detail": {
+        "status": "done",
+        "dispute": null
+      }
+    }
+  ]
+}

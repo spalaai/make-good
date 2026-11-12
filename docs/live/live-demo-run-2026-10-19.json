@@ -1,0 +1,802 @@
+{
+ "note": "PayPal sandbox, play money. Exported from the database of the console run. Emails and raw audit details are left out.",
+ "incidents": [
+  {
+   "id": "inc_6891d662702a",
+   "order_id": "3TV33723RS2694949",
+   "capture_id": "44479012T9014473F",
+   "purchase_cents": 2000,
+   "status": "done",
+   "remedy": "merchant_refund",
+   "amount_cents": 2000,
+   "dispute_id": "PP-R-PRG-10193448",
+   "dispute_status": "RESOLVED",
+   "refund_id": "15L83320PH726421K",
+   "created_at": "2026-10-19T01:30:07.422Z",
+   "updated_at": "2026-10-19T01:32:27.732Z"
+  },
+  {
+   "id": "inc_0309ccbd5893",
+   "order_id": "MG-ORDER-2",
+   "capture_id": null,
+   "purchase_cents": 1500,
+   "status": "done",
+   "remedy": "operator_payout",
+   "amount_cents": 1500,
+   "dispute_id": null,
+   "dispute_status": null,
+   "refund_id": null,
+   "created_at": "2026-10-19T01:32:50.555Z",
+   "updated_at": "2026-10-19T01:33:29.927Z"
+  },
+  {
+   "id": "inc_796be9e78504",
+   "order_id": "MG-ORDER-3",
+   "capture_id": null,
+   "purchase_cents": 1800,
+   "status": "needs_owner",
+   "remedy": "defend",
+   "amount_cents": 0,
+   "dispute_id": null,
+   "dispute_status": null,
+   "refund_id": null,
+   "created_at": "2026-10-19T01:33:46.326Z",
+   "updated_at": "2026-10-19T01:33:53.554Z"
+  },
+  {
+   "id": "inc_1cecf4f9d5b1",
+   "order_id": "MG-ORDER-4",
+   "capture_id": null,
+   "purchase_cents": 1200,
+   "status": "needs_owner",
+   "remedy": "defend",
+   "amount_cents": 0,
+   "dispute_id": null,
+   "dispute_status": null,
+   "refund_id": null,
+   "created_at": "2026-10-19T01:33:46.332Z",
+   "updated_at": "2026-10-19T01:33:56.361Z"
+  }
+ ],
+ "payouts": [
+  {
+   "incident_id": "inc_0309ccbd5893",
+   "sender_batch_id": "mg_batch_326ae05e2fd447a1",
+   "sender_item_id": "mg_item_326ae05e2fd447a1",
+   "amount_cents": 1500,
+   "status": "success",
+   "paypal_batch_id": "6L88CLZG2BTJC",
+   "paypal_item_id": "6UW7XQTTF4SFW",
+   "transaction_id": "1RM01015UC573444L",
+   "created_at": "2026-10-19T01:33:12.331Z",
+   "updated_at": "2026-10-19T01:33:29.925Z"
+  }
+ ],
+ "ledger": [
+  {
+   "at": "2026-10-19T01:32:26.403Z",
+   "incident_id": "inc_6891d662702a",
+   "account": "merchant",
+   "amount_cents": -2000,
+   "kind": "merchant_refund",
+   "ref": "15L83320PH726421K",
+   "label": "Shop refunded the buyer through PayPal."
+  },
+  {
+   "at": "2026-10-19T01:32:26.403Z",
+   "incident_id": "inc_6891d662702a",
+   "account": "buyer",
+   "amount_cents": 2000,
+   "kind": "merchant_refund",
+   "ref": "15L83320PH726421K",
+   "label": "Buyer received the refund."
+  },
+  {
+   "at": "2026-10-19T01:33:29.926Z",
+   "incident_id": "inc_0309ccbd5893",
+   "account": "operator",
+   "amount_cents": -1500,
+   "kind": "operator_payout",
+   "ref": "6UW7XQTTF4SFW",
+   "label": "Operator ledger line. In the sandbox it is paid from the same PayPal balance as the shop."
+  },
+  {
+   "at": "2026-10-19T01:33:29.927Z",
+   "incident_id": "inc_0309ccbd5893",
+   "account": "buyer",
+   "amount_cents": 1500,
+   "kind": "operator_payout",
+   "ref": "6UW7XQTTF4SFW",
+   "label": "Buyer received the reimbursement."
+  },
+  {
+   "at": "2026-10-19T01:33:29.927Z",
+   "incident_id": "inc_0309ccbd5893",
+   "account": "merchant",
+   "amount_cents": 0,
+   "kind": "sale_retained",
+   "ref": "6UW7XQTTF4SFW",
+   "label": "Shop delivered what it listed and keeps the sale."
+  }
+ ],
+ "audit_events": [
+  {
+   "at": "2026-10-19T01:30:07.385Z",
+   "actor": "owner",
+   "event": "purchase_recorded",
+   "incident_id": null
+  },
+  {
+   "at": "2026-10-19T01:30:07.423Z",
+   "actor": "owner",
+   "event": "incident_opened",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:08.755Z",
+   "actor": "make-good",
+   "event": "agent_picked_up",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:11.085Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:11.820Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:17.212Z",
+   "actor": "ai",
+   "event": "proposal_built",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:17.215Z",
+   "actor": "rule",
+   "event": "decision_made",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:17.518Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:22.060Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:27.283Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:31.759Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:37.269Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:37.431Z",
+   "actor": "owner",
+   "event": "approved",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:38.936Z",
+   "actor": "make-good",
+   "event": "offer_requested",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:42.059Z",
+   "actor": "make-good",
+   "event": "offer_made",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:42.507Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:43.786Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:46.484Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:46.727Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:47.760Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:50.492Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:51.869Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:52.253Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:53.683Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:55.814Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:56.748Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:58.511Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:30:59.785Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:02.298Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:02.450Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:03.781Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:05.806Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:07.257Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:07.798Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:09.804Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:12.271Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:12.301Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:14.518Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:15.801Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:17.251Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:17.816Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:19.810Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:22.308Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:22.468Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:23.794Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:25.876Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:26.776Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:27.812Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:29.803Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:32.457Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:32.618Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:33.810Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:35.825Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:37.461Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:37.826Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:39.825Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:42.475Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:42.510Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:43.842Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:45.837Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:47.233Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:48.332Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:50.548Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:52.270Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:52.340Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:54.573Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:55.809Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:57.237Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:57.838Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:31:59.848Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:01.778Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:01.815Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:04.551Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:06.532Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:07.251Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:07.832Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:09.852Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:11.821Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:11.857Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:13.845Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:16.556Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:16.734Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:17.959Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:19.876Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:22.461Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:22.659Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:23.865Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:25.849Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:26.401Z",
+   "actor": "make-good",
+   "event": "refund_confirmed",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:26.403Z",
+   "actor": "make-good",
+   "event": "ledger_written",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:26.404Z",
+   "actor": "make-good",
+   "event": "dispute_resolved",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:27.487Z",
+   "actor": "make-good",
+   "event": "dispute_synced",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:27.731Z",
+   "actor": "make-good",
+   "event": "dispute_resolved",
+   "incident_id": "inc_6891d662702a"
+  },
+  {
+   "at": "2026-10-19T01:32:50.552Z",
+   "actor": "owner",
+   "event": "purchase_recorded",
+   "incident_id": null
+  },
+  {
+   "at": "2026-10-19T01:32:50.556Z",
+   "actor": "owner",
+   "event": "incident_opened",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:32:50.854Z",
+   "actor": "make-good",
+   "event": "agent_picked_up",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:32:55.711Z",
+   "actor": "ai",
+   "event": "proposal_built",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:32:55.713Z",
+   "actor": "rule",
+   "event": "decision_made",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:33:12.329Z",
+   "actor": "owner",
+   "event": "approved",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:33:12.332Z",
+   "actor": "make-good",
+   "event": "payout_prepared",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:33:12.941Z",
+   "actor": "make-good",
+   "event": "payout_sent",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:33:29.925Z",
+   "actor": "make-good",
+   "event": "payout_success",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:33:29.927Z",
+   "actor": "make-good",
+   "event": "ledger_written",
+   "incident_id": "inc_0309ccbd5893"
+  },
+  {
+   "at": "2026-10-19T01:33:46.322Z",
+   "actor": "owner",
+   "event": "purchase_recorded",
+   "incident_id": null
+  },
+  {
+   "at": "2026-10-19T01:33:46.326Z",
+   "actor": "owner",
+   "event": "incident_opened",
+   "incident_id": "inc_796be9e78504"
+  },
+  {
+   "at": "2026-10-19T01:33:46.330Z",
+   "actor": "owner",
+   "event": "purchase_recorded",
+   "incident_id": null
+  },
+  {
+   "at": "2026-10-19T01:33:46.332Z",
+   "actor": "owner",
+   "event": "incident_opened",
+   "incident_id": "inc_1cecf4f9d5b1"
+  },
+  {
+   "at": "2026-10-19T01:33:46.894Z",
+   "actor": "make-good",
+   "event": "agent_picked_up",
+   "incident_id": "inc_1cecf4f9d5b1"
+  },
+  {
+   "at": "2026-10-19T01:33:48.899Z",
+   "actor": "make-good",
+   "event": "agent_picked_up",
+   "incident_id": "inc_796be9e78504"
+  },
+  {
+   "at": "2026-10-19T01:33:53.550Z",
+   "actor": "ai",
+   "event": "proposal_built",
+   "incident_id": "inc_796be9e78504"
+  },
+  {
+   "at": "2026-10-19T01:33:53.553Z",
+   "actor": "rule",
+   "event": "decision_made",
+   "incident_id": "inc_796be9e78504"
+  },
+  {
+   "at": "2026-10-19T01:33:56.359Z",
+   "actor": "ai",
+   "event": "proposal_built",
+   "incident_id": "inc_1cecf4f9d5b1"
+  },
+  {
+   "at": "2026-10-19T01:33:56.360Z",
+   "actor": "rule",
+   "event": "decision_made",
+   "incident_id": "inc_1cecf4f9d5b1"
+  }
+ ]
+}

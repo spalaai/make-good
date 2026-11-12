@@ -1,0 +1,38 @@
+{
+  "http": 200,
+  "status": "RESOLVED",
+  "reason": "MERCHANDISE_OR_SERVICE_NOT_RECEIVED",
+  "outcome": {
+    "outcome_code": "RESOLVED_BUYER_FAVOUR",
+    "outcome_reason": "SELLER_ISSUED_REFUND",
+    "amount_refunded": {
+      "currency_code": "USD",
+      "value": "20.00"
+    }
+  },
+  "lifecycle": "INQUIRY",
+  "channel": "INTERNAL",
+  "amount": {
+    "currency_code": "USD",
+    "value": "20.00"
+  },
+  "created": "2026-10-19T01:00:45.657Z",
+  "updated": "2026-10-19T01:07:03.657Z",
+  "offer": {
+    "buyer_requested_amount": {
+      "currency_code": "USD",
+      "value": "20.00"
+    },
+    "history": []
+  },
+  "messages": [
+    {
+      "posted_by": "BUYER",
+      "time": "2026-10-19T01:00:45.657Z",
+      "content": "Sandbox test: the Bali market report I paid for was never delivered."
+    }
+  ],
+  "refund_ids": [
+    "2C237508SJ982271A"
+  ]
+}

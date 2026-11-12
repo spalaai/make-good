@@ -1,0 +1,20 @@
+{
+  "http": 200,
+  "batch_status": "SUCCESS",
+  "sender_batch_id": "mg_batch_326ae05e2fd447a1",
+  "amount": {
+    "currency": "USD",
+    "value": "15.00"
+  },
+  "items": [
+    {
+      "payout_item_id": "6UW7XQTTF4SFW",
+      "transaction_id": "1RM01015UC573444L",
+      "transaction_status": "SUCCESS",
+      "amount": {
+        "currency": "USD",
+        "value": "15.00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "path": "payout",
+  "ranAt": "2026-10-19T00:44:35.669Z",
+  "note": "PayPal sandbox, play money. Records are synthetic text written for the demo. Emails are masked.",
+  "ai": {
+    "mode": "AI: live (gemini, gemini-3.8-flash)",
+    "source": {
+      "kind": "live",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash"
+    }
+  },
+  "proposal": {
+    "fault": "operator",
+    "confidence": 1,
+    "summary": "The customer asked for the 2026 edition, but the agent purchased the 2025 edition instead.",
+    "citations": [
+      {
+        "recordId": "r1",
+        "quote": "Get me the 2026 edition of the Packaging Suppliers Report."
+      },
+      {
+        "recordId": "r4",
+        "quote": "Cart: 1 x Packaging Suppliers Report 2025 edition, $1.00."
+      }
+    ]
+  },
+  "decision": {
+    "remedy": "operator_payout",
+    "amountCents": 100,
+    "capped": false,
+    "checks": [
+      {
+        "id": "fault_decided",
+        "passed": true
+      },
+      {
+        "id": "confidence",
+        "passed": true
+      },
+      {
+        "id": "has_citations",
+        "passed": true
+      },
+      {
+        "id": "quotes_verbatim",
+        "passed": true
+      },
+      {
+        "id": "right_evidence",
+        "passed": true
+      },
+      {
+        "id": "no_double_pay",
+        "passed": true
+      },
+      {
+        "id": "complaint_text",
+        "passed": true
+      },
+      {
+        "id": "amount_from_policy",
+        "passed": true
+      }
+    ]
+  },
+  "evidence": {
+    "finalStatus": "done",
+    "refundId": null,
+    "disputeId": null,
+    "payout": {
+      "id": "pay_d096a66dec184767",
+      "incidentId": "inc_bd43d29fcaee",
+      "senderBatchId": "mg_batch_d096a66dec184767",
+      "senderItemId": "mg_item_d096a66dec184767",
+      "requestId": "mg-req-d096a66dec184767",
+      "amountCents": 100,
+      "receiverEmail": "sb-***@personal.example.com",
+      "status": "success",
+      "paypalBatchId": "8LWZUF4L6SK4Q",
+      "paypalItemId": "NZP63XAPFGR8A",
+      "transactionId": "4WJ5108604268402B",
+      "error": null
+    },
+    "paypalSays": {
+      "http": 200,
+      "batchStatus": "PROCESSING",
+      "itemStatus": "SUCCESS",
+      "itemId": "NZP63XAPFGR8A",
+      "transactionId": "4WJ5108604268402B"
+    },
+    "resendWithSameSenderBatchId": {
+      "outcome": "duplicate",
+      "foundOriginalBatch": true,
+      "paypalBatchId": "8LWZUF4L6SK4Q"
+    }
+  },
+  "ledger": [
+    {
+      "account": "merchant",
+      "amountCents": 0,
+      "kind": "sale_retained",
+      "ref": "NZP63XAPFGR8A",
+      "label": "Shop delivered what it listed and keeps the sale."
+    },
+    {
+      "account": "buyer",
+      "amountCents": 100,
+      "kind": "operator_payout",
+      "ref": "NZP63XAPFGR8A",
+      "label": "Buyer received the reimbursement."
+    },
+    {
+      "account": "operator",
+      "amountCents": -100,
+      "kind": "operator_payout",
+      "ref": "NZP63XAPFGR8A",
+      "label": "Operator ledger line. In the sandbox it is paid from the same PayPal balance as the shop."
+    }
+  ],
+  "audit": [
+    {
+      "at": "2026-10-19T00:44:06.696Z",
+      "actor": "agent",
+      "event": "purchase_recorded"
+    },
+    {
+      "at": "2026-10-19T00:44:06.697Z",
+      "actor": "agent",
+      "event": "incident_opened"
+    },
+    {
+      "at": "2026-10-19T00:44:06.698Z",
+      "actor": "make-good",
+      "event": "agent_picked_up"
+    },
+    {
+      "at": "2026-10-19T00:44:11.596Z",
+      "actor": "ai",
+      "event": "proposal_built"
+    },
+    {
+      "at": "2026-10-19T00:44:11.598Z",
+      "actor": "rule",
+      "event": "decision_made"
+    },
+    {
+      "at": "2026-10-19T00:44:11.600Z",
+      "actor": "owner",
+      "event": "approved"
+    },
+    {
+      "at": "2026-10-19T00:44:11.601Z",
+      "actor": "make-good",
+      "event": "payout_prepared"
+    },
+    {
+      "at": "2026-10-19T00:44:13.302Z",
+      "actor": "make-good",
+      "event": "payout_sent"
+    },
+    {
+      "at": "2026-10-19T00:44:33.674Z",
+      "actor": "make-good",
+      "event": "payout_success"
+    },
+    {
+      "at": "2026-10-19T00:44:33.675Z",
+      "actor": "make-good",
+      "event": "ledger_written"
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-19T00:44:06.694Z",
+      "step": "start",
+      "detail": {
+        "path": "payout",
+        "payments": "PayPal sandbox (play money)",
+        "ai": "AI: live (gemini, gemini-3.8-flash)",
+        "db": "data/live-payout-2026-10-19T00-44-06-688Z.db"
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:06.697Z",
+      "step": "incident_opened",
+      "detail": {
+        "incidentId": "inc_bd43d29fcaee"
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:11.599Z",
+      "step": "proposed",
+      "detail": {
+        "status": "needs_owner",
+        "fault": "operator",
+        "confidence": 1,
+        "remedy": "operator_payout",
+        "amountCents": 100,
+        "aiSource": {
+          "kind": "live",
+          "provider": "gemini",
+          "model": "gemini-3.8-flash"
+        },
+        "citationsOk": true
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:14.396Z",
+      "step": "approved",
+      "detail": {
+        "status": "payout_sent"
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:14.396Z",
+      "step": "payout_row",
+      "detail": {
+        "senderBatchId": "mg_batch_d096a66dec184767",
+        "senderItemId": "mg_item_d096a66dec184767",
+        "status": "sent",
+        "paypalBatchId": "8LWZUF4L6SK4Q"
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:15.178Z",
+      "step": "status",
+      "detail": {
+        "status": "payout_sent",
+        "dispute": null
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:33.676Z",
+      "step": "status",
+      "detail": {
+        "status": "done",
+        "dispute": null
+      }
+    },
+    {
+      "at": "2026-10-19T00:44:35.669Z",
+      "step": "resend_same_sender_batch_id",
+      "detail": {
+        "outcome": "duplicate",
+        "foundOriginalBatch": true,
+        "paypalBatchId": "8LWZUF4L6SK4Q"
+      }
+    }
+  ]
+}
